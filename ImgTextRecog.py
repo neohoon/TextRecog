@@ -30,7 +30,7 @@ from PIL import Image as PIL_Image
 import argparse
 import re
 import enchant
-from MyUtility import *
+from HoonUtils import *
 from difflib import SequenceMatcher
 
 ########################################################################################################################
@@ -143,7 +143,7 @@ class ImgTextRecognition:
                 if False:
                     test_img = cv2.rectangle(org_img.copy(), img_text_rst.get_stt_pnt(), img_text_rst.get_end_pnt(),
                                              RED, 2)
-                    print img_text_rst.text
+                    print(img_text_rst.text)
                     # cv2.putText(test_img, img_text_rst.text, (img_text_rst.x, img_text_rst.y+img_text_rst.height+16),
                     #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, BLUE, 1, cv2.LINE_AA)
                     my_imshow(test_img)

@@ -12,7 +12,7 @@
 
 import sys
 import os
-import ImageTextRecognition
+import ImgTextRecog as ImageTextRecognition
 import argparse
 import cv2
 import numpy as np
@@ -175,7 +175,7 @@ def main_video(arg):
         arg.out_vid_file = ".".join(arg.out_vid_file.split('.')[:-1]) + ".avi"
         video_writer = cv2.VideoWriter(arg.out_vid_file, cv2.VideoWriter_fourcc(*'XVID'), fps, (2*width, height), 1)
     except Exception as e:
-            print e
+            print(e)
             sys.exit()
 
     # Loop
